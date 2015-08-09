@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8263B35F1B6DF6A9003A98AC /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8263B35D1B6DF6A9003A98AC /* folder.png */; };
 		8263B3601B6DF6A9003A98AC /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8263B35E1B6DF6A9003A98AC /* movie.png */; };
+		826CD7F31B77AB4C003FDD6A /* seek_backward.png in Resources */ = {isa = PBXBuildFile; fileRef = 826CD7EF1B77AB4C003FDD6A /* seek_backward.png */; };
+		826CD7F41B77AB4C003FDD6A /* seek_fast_backward.png in Resources */ = {isa = PBXBuildFile; fileRef = 826CD7F01B77AB4C003FDD6A /* seek_fast_backward.png */; };
+		826CD7F51B77AB4C003FDD6A /* seek_fast_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 826CD7F11B77AB4C003FDD6A /* seek_fast_forward.png */; };
+		826CD7F61B77AB4C003FDD6A /* seek_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 826CD7F21B77AB4C003FDD6A /* seek_forward.png */; };
+		826CD7F81B77AC5D003FDD6A /* play_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 826CD7F71B77AC5D003FDD6A /* play_pause.png */; };
+		826CD7FA1B77AD59003FDD6A /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 826CD7F91B77AD59003FDD6A /* stop.png */; };
 		82A6C3871B761B6200C0AECB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6C3861B761B6200C0AECB /* Constants.swift */; };
 		82EAFF751B6D00D300F76156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFF741B6D00D300F76156 /* AppDelegate.swift */; };
 		82EAFF771B6D00D300F76156 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFF761B6D00D300F76156 /* ViewController.swift */; };
@@ -71,6 +77,12 @@
 /* Begin PBXFileReference section */
 		8263B35D1B6DF6A9003A98AC /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
 		8263B35E1B6DF6A9003A98AC /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
+		826CD7EF1B77AB4C003FDD6A /* seek_backward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seek_backward.png; sourceTree = "<group>"; };
+		826CD7F01B77AB4C003FDD6A /* seek_fast_backward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seek_fast_backward.png; sourceTree = "<group>"; };
+		826CD7F11B77AB4C003FDD6A /* seek_fast_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seek_fast_forward.png; sourceTree = "<group>"; };
+		826CD7F21B77AB4C003FDD6A /* seek_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seek_forward.png; sourceTree = "<group>"; };
+		826CD7F71B77AC5D003FDD6A /* play_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_pause.png; sourceTree = "<group>"; };
+		826CD7F91B77AD59003FDD6A /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
 		82A6C3861B761B6200C0AECB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		82EAFF711B6D00D300F76156 /* OMXPlayer Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMXPlayer Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82EAFF741B6D00D300F76156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +153,12 @@
 				82EAFF7B1B6D00D300F76156 /* Assets.xcassets */,
 				8263B35D1B6DF6A9003A98AC /* folder.png */,
 				8263B35E1B6DF6A9003A98AC /* movie.png */,
+				826CD7EF1B77AB4C003FDD6A /* seek_backward.png */,
+				826CD7F01B77AB4C003FDD6A /* seek_fast_backward.png */,
+				826CD7F11B77AB4C003FDD6A /* seek_fast_forward.png */,
+				826CD7F21B77AB4C003FDD6A /* seek_forward.png */,
+				826CD7F71B77AC5D003FDD6A /* play_pause.png */,
+				826CD7F91B77AD59003FDD6A /* stop.png */,
 				82EAFF801B6D00D300F76156 /* Info.plist */,
 			);
 			path = "OMXPlayer Remote";
@@ -274,9 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8263B3601B6DF6A9003A98AC /* movie.png in Resources */,
+				826CD7FA1B77AD59003FDD6A /* stop.png in Resources */,
 				82EAFF7C1B6D00D300F76156 /* Assets.xcassets in Resources */,
+				826CD7F81B77AC5D003FDD6A /* play_pause.png in Resources */,
 				82EAFF7A1B6D00D300F76156 /* Main.storyboard in Resources */,
 				8263B35F1B6DF6A9003A98AC /* folder.png in Resources */,
+				826CD7F51B77AB4C003FDD6A /* seek_fast_forward.png in Resources */,
+				826CD7F41B77AB4C003FDD6A /* seek_fast_backward.png in Resources */,
+				826CD7F31B77AB4C003FDD6A /* seek_backward.png in Resources */,
+				826CD7F61B77AB4C003FDD6A /* seek_forward.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
