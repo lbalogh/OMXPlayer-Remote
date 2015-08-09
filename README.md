@@ -4,7 +4,7 @@ Control OMXPlayer from iPhone and Apple Watch
 ## Prerequisites ##
 
 * XCode 7.0 Beta 5
-* This project uses https://raw.githubusercontent.com/willprice/python-omxplayer-wrapper to control OMXPlayer.
+* This project uses https://github.com/willprice/python-omxplayer-wrapper to control OMXPlayer.
 
 ## Install ##
 
