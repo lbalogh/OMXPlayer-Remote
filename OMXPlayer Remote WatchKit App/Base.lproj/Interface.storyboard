@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8164.2" systemVersion="15A234d" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8135.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8083.2"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="OMXPlayer_Remote_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <button width="1" height="55" alignment="left" title="&gt;||" id="IdM-Va-BlV">
+                            <connections>
+                                <action selector="pauseButtonPressed" destination="AgC-eL-Hgc" id="B0M-8Q-fhG"/>
+                            </connections>
+                        </button>
+                        <group width="1" alignment="left" id="h0B-nB-xCz">
+                            <items>
+                                <button width="0.5" height="50" alignment="left" title="&lt;" id="lLk-J5-mRi">
+                                    <connections>
+                                        <action selector="seekBackwardButtonPressed" destination="AgC-eL-Hgc" id="zVD-Ud-S5h"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="50" alignment="left" title="&gt;" id="ssV-wQ-GKB">
+                                    <connections>
+                                        <action selector="seekForwardButtonPressed" destination="AgC-eL-Hgc" id="3mK-gP-Vin"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="2AJ-zH-MvL">
+                            <items>
+                                <button width="0.5" height="50" alignment="left" title="&lt;&lt;" id="I2s-DA-t4g">
+                                    <connections>
+                                        <action selector="seekFastBackwardButtonPressed" destination="AgC-eL-Hgc" id="1iD-vf-6b2"/>
+                                    </connections>
+                                </button>
+                                <button width="0.5" height="50" alignment="left" title="&gt;&gt;" id="16z-nV-dZY">
+                                    <connections>
+                                        <action selector="seekFastForwardButtonPressed" destination="AgC-eL-Hgc" id="g1C-H7-jtn"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="164" y="217"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="rjY-Ar-IMT">
+            <objects>
+                <glanceController spacing="0.0" id="Sv0-Ai-Zie" customClass="GlanceController" customModule="OMXPlayer_Remote_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="gv7-I2-MZq"/>
+                        <group alignment="left" id="eew-Gs-W6Y"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="164" y="514"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8263B35F1B6DF6A9003A98AC /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 8263B35D1B6DF6A9003A98AC /* folder.png */; };
+		8263B3601B6DF6A9003A98AC /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 8263B35E1B6DF6A9003A98AC /* movie.png */; };
+		82A6C3871B761B6200C0AECB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6C3861B761B6200C0AECB /* Constants.swift */; };
+		82EAFF751B6D00D300F76156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFF741B6D00D300F76156 /* AppDelegate.swift */; };
+		82EAFF771B6D00D300F76156 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFF761B6D00D300F76156 /* ViewController.swift */; };
+		82EAFF7A1B6D00D300F76156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82EAFF781B6D00D300F76156 /* Main.storyboard */; };
+		82EAFF7C1B6D00D300F76156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EAFF7B1B6D00D300F76156 /* Assets.xcassets */; };
+		82EAFF841B6D00D300F76156 /* OMXPlayer Remote WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 82EAFF831B6D00D300F76156 /* OMXPlayer Remote WatchKit App.app */; };
+		82EAFF8A1B6D00D300F76156 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82EAFF881B6D00D300F76156 /* Interface.storyboard */; };
+		82EAFF8C1B6D00D300F76156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EAFF8B1B6D00D300F76156 /* Assets.xcassets */; };
+		82EAFF931B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 82EAFF921B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		82EAFF981B6D00D400F76156 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFF971B6D00D400F76156 /* InterfaceController.swift */; };
+		82EAFF9A1B6D00D400F76156 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFF991B6D00D400F76156 /* ExtensionDelegate.swift */; };
+		82EAFF9C1B6D00D400F76156 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFF9B1B6D00D400F76156 /* GlanceController.swift */; };
+		82EAFF9E1B6D00D400F76156 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82EAFF9D1B6D00D400F76156 /* Assets.xcassets */; };
+		82EAFFAE1B6D05E400F76156 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFFAD1B6D05E400F76156 /* Constants.swift */; };
+		82EAFFB01B6D0F1900F76156 /* FileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFFAF1B6D0F1900F76156 /* FileTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		82EAFF851B6D00D300F76156 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82EAFF691B6D00D300F76156 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82EAFF821B6D00D300F76156;
+			remoteInfo = "OMXPlayer Remote WatchKit App";
+		};
+		82EAFF941B6D00D400F76156 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82EAFF691B6D00D300F76156 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82EAFF911B6D00D400F76156;
+			remoteInfo = "OMXPlayer Remote WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		82EAFFA51B6D00D400F76156 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				82EAFF931B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82EAFFA91B6D00D400F76156 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				82EAFF841B6D00D300F76156 /* OMXPlayer Remote WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8263B35D1B6DF6A9003A98AC /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
+		8263B35E1B6DF6A9003A98AC /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
+		82A6C3861B761B6200C0AECB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		82EAFF711B6D00D300F76156 /* OMXPlayer Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMXPlayer Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82EAFF741B6D00D300F76156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		82EAFF761B6D00D300F76156 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		82EAFF791B6D00D300F76156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		82EAFF7B1B6D00D300F76156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82EAFF801B6D00D300F76156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82EAFF831B6D00D300F76156 /* OMXPlayer Remote WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMXPlayer Remote WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82EAFF891B6D00D300F76156 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		82EAFF8B1B6D00D300F76156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82EAFF8D1B6D00D300F76156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82EAFF921B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OMXPlayer Remote WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82EAFF971B6D00D400F76156 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		82EAFF991B6D00D400F76156 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		82EAFF9B1B6D00D400F76156 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		82EAFF9D1B6D00D400F76156 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		82EAFF9F1B6D00D400F76156 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82EAFFAD1B6D05E400F76156 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		82EAFFAF1B6D0F1900F76156 /* FileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		82EAFF6E1B6D00D300F76156 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82EAFF8F1B6D00D400F76156 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		82EAFF681B6D00D300F76156 = {
+			isa = PBXGroup;
+			children = (
+				82EAFF731B6D00D300F76156 /* OMXPlayer Remote */,
+				82EAFF871B6D00D300F76156 /* OMXPlayer Remote WatchKit App */,
+				82EAFF961B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension */,
+				82EAFF721B6D00D300F76156 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		82EAFF721B6D00D300F76156 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82EAFF711B6D00D300F76156 /* OMXPlayer Remote.app */,
+				82EAFF831B6D00D300F76156 /* OMXPlayer Remote WatchKit App.app */,
+				82EAFF921B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82EAFF731B6D00D300F76156 /* OMXPlayer Remote */ = {
+			isa = PBXGroup;
+			children = (
+				82EAFFAD1B6D05E400F76156 /* Constants.swift */,
+				82EAFF741B6D00D300F76156 /* AppDelegate.swift */,
+				82EAFF761B6D00D300F76156 /* ViewController.swift */,
+				82EAFFAF1B6D0F1900F76156 /* FileTableViewController.swift */,
+				82EAFF781B6D00D300F76156 /* Main.storyboard */,
+				82EAFF7B1B6D00D300F76156 /* Assets.xcassets */,
+				8263B35D1B6DF6A9003A98AC /* folder.png */,
+				8263B35E1B6DF6A9003A98AC /* movie.png */,
+				82EAFF801B6D00D300F76156 /* Info.plist */,
+			);
+			path = "OMXPlayer Remote";
+			sourceTree = "<group>";
+		};
+		82EAFF871B6D00D300F76156 /* OMXPlayer Remote WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				82EAFF881B6D00D300F76156 /* Interface.storyboard */,
+				82EAFF8B1B6D00D300F76156 /* Assets.xcassets */,
+				82EAFF8D1B6D00D300F76156 /* Info.plist */,
+			);
+			path = "OMXPlayer Remote WatchKit App";
+			sourceTree = "<group>";
+		};
+		82EAFF961B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				82A6C3861B761B6200C0AECB /* Constants.swift */,
+				82EAFF971B6D00D400F76156 /* InterfaceController.swift */,
+				82EAFF991B6D00D400F76156 /* ExtensionDelegate.swift */,
+				82EAFF9B1B6D00D400F76156 /* GlanceController.swift */,
+				82EAFF9D1B6D00D400F76156 /* Assets.xcassets */,
+				82EAFF9F1B6D00D400F76156 /* Info.plist */,
+			);
+			path = "OMXPlayer Remote WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82EAFF701B6D00D300F76156 /* OMXPlayer Remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82EAFFAA1B6D00D400F76156 /* Build configuration list for PBXNativeTarget "OMXPlayer Remote" */;
+			buildPhases = (
+				82EAFF6D1B6D00D300F76156 /* Sources */,
+				82EAFF6E1B6D00D300F76156 /* Frameworks */,
+				82EAFF6F1B6D00D300F76156 /* Resources */,
+				82EAFFA91B6D00D400F76156 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82EAFF861B6D00D300F76156 /* PBXTargetDependency */,
+			);
+			name = "OMXPlayer Remote";
+			productName = "OMXPlayer Remote";
+			productReference = 82EAFF711B6D00D300F76156 /* OMXPlayer Remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		82EAFF821B6D00D300F76156 /* OMXPlayer Remote WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82EAFFA61B6D00D400F76156 /* Build configuration list for PBXNativeTarget "OMXPlayer Remote WatchKit App" */;
+			buildPhases = (
+				82EAFF811B6D00D300F76156 /* Resources */,
+				82EAFFA51B6D00D400F76156 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				82EAFF951B6D00D400F76156 /* PBXTargetDependency */,
+			);
+			name = "OMXPlayer Remote WatchKit App";
+			productName = "OMXPlayer Remote WatchKit App";
+			productReference = 82EAFF831B6D00D300F76156 /* OMXPlayer Remote WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		82EAFF911B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82EAFFA21B6D00D400F76156 /* Build configuration list for PBXNativeTarget "OMXPlayer Remote WatchKit Extension" */;
+			buildPhases = (
+				82EAFF8E1B6D00D400F76156 /* Sources */,
+				82EAFF8F1B6D00D400F76156 /* Frameworks */,
+				82EAFF901B6D00D400F76156 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OMXPlayer Remote WatchKit Extension";
+			productName = "OMXPlayer Remote WatchKit Extension";
+			productReference = 82EAFF921B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		82EAFF691B6D00D300F76156 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Ludovic Balogh";
+				TargetAttributes = {
+					82EAFF701B6D00D300F76156 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = VKAA242EKN;
+					};
+					82EAFF821B6D00D300F76156 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = VKAA242EKN;
+					};
+					82EAFF911B6D00D400F76156 = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = VKAA242EKN;
+					};
+				};
+			};
+			buildConfigurationList = 82EAFF6C1B6D00D300F76156 /* Build configuration list for PBXProject "OMXPlayer Remote" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 82EAFF681B6D00D300F76156;
+			productRefGroup = 82EAFF721B6D00D300F76156 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82EAFF701B6D00D300F76156 /* OMXPlayer Remote */,
+				82EAFF821B6D00D300F76156 /* OMXPlayer Remote WatchKit App */,
+				82EAFF911B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		82EAFF6F1B6D00D300F76156 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8263B3601B6DF6A9003A98AC /* movie.png in Resources */,
+				82EAFF7C1B6D00D300F76156 /* Assets.xcassets in Resources */,
+				82EAFF7A1B6D00D300F76156 /* Main.storyboard in Resources */,
+				8263B35F1B6DF6A9003A98AC /* folder.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82EAFF811B6D00D300F76156 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82EAFF8C1B6D00D300F76156 /* Assets.xcassets in Resources */,
+				82EAFF8A1B6D00D300F76156 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82EAFF901B6D00D400F76156 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82EAFF9E1B6D00D400F76156 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		82EAFF6D1B6D00D300F76156 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82EAFF771B6D00D300F76156 /* ViewController.swift in Sources */,
+				82EAFF751B6D00D300F76156 /* AppDelegate.swift in Sources */,
+				82EAFFAE1B6D05E400F76156 /* Constants.swift in Sources */,
+				82EAFFB01B6D0F1900F76156 /* FileTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82EAFF8E1B6D00D400F76156 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82EAFF9A1B6D00D400F76156 /* ExtensionDelegate.swift in Sources */,
+				82EAFF981B6D00D400F76156 /* InterfaceController.swift in Sources */,
+				82EAFF9C1B6D00D400F76156 /* GlanceController.swift in Sources */,
+				82A6C3871B761B6200C0AECB /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		82EAFF861B6D00D300F76156 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82EAFF821B6D00D300F76156 /* OMXPlayer Remote WatchKit App */;
+			targetProxy = 82EAFF851B6D00D300F76156 /* PBXContainerItemProxy */;
+		};
+		82EAFF951B6D00D400F76156 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82EAFF911B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension */;
+			targetProxy = 82EAFF941B6D00D400F76156 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		82EAFF781B6D00D300F76156 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82EAFF791B6D00D300F76156 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		82EAFF881B6D00D300F76156 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82EAFF891B6D00D300F76156 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		82EAFFA01B6D00D400F76156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		82EAFFA11B6D00D400F76156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		82EAFFA31B6D00D400F76156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "OMXPlayer Remote WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		82EAFFA41B6D00D400F76156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "OMXPlayer Remote WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		82EAFFA71B6D00D400F76156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = OMXPlayer_Remote_WatchKit_Extension;
+				INFOPLIST_FILE = "OMXPlayer Remote WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		82EAFFA81B6D00D400F76156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = OMXPlayer_Remote_WatchKit_Extension;
+				INFOPLIST_FILE = "OMXPlayer Remote WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		82EAFFAB1B6D00D400F76156 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "OMXPlayer Remote/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		82EAFFAC1B6D00D400F76156 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "OMXPlayer Remote/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		82EAFF6C1B6D00D300F76156 /* Build configuration list for PBXProject "OMXPlayer Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82EAFFA01B6D00D400F76156 /* Debug */,
+				82EAFFA11B6D00D400F76156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82EAFFA21B6D00D400F76156 /* Build configuration list for PBXNativeTarget "OMXPlayer Remote WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82EAFFA31B6D00D400F76156 /* Debug */,
+				82EAFFA41B6D00D400F76156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82EAFFA61B6D00D400F76156 /* Build configuration list for PBXNativeTarget "OMXPlayer Remote WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82EAFFA71B6D00D400F76156 /* Debug */,
+				82EAFFA81B6D00D400F76156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82EAFFAA1B6D00D400F76156 /* Build configuration list for PBXNativeTarget "OMXPlayer Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82EAFFAB1B6D00D400F76156 /* Debug */,
+				82EAFFAC1B6D00D400F76156 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 82EAFF691B6D00D300F76156 /* Project object */;
+}
