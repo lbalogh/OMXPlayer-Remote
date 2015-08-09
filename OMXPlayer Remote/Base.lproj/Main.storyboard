@@ -112,13 +112,29 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRm-UJ-kLE">
-                                <rect key="frame" x="267" y="438" width="66" height="30"/>
+                                <rect key="frame" x="267" y="495" width="66" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Poweroff"/>
                                 <connections>
                                     <action selector="poweroffButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zMZ-vo-cVv"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e0U-ht-eA1">
+                                <rect key="frame" x="104" y="318" width="391" height="123"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-aG-7K4">
+                                        <rect key="frame" x="148" y="15" width="94" height="40"/>
+                                        <animations/>
+                                        <state key="normal" title="Next subtitle stream"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="cie-kc-mLE">
+                                        <rect key="frame" x="148" y="63" width="117" height="52"/>
+                                        <animations/>
+                                        <state key="normal" title="Previous subtitle stream"/>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -127,7 +143,9 @@
                             <constraint firstItem="CRm-UJ-kLE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p3C-ep-dB4"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="IBi-t1-oBy"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="browseButton" destination="nC7-Pf-74I" id="wzL-Qr-ylG"/>
                         <outlet property="ipAddressTextField" destination="yIE-f3-E6l" id="Ab1-SL-haT"/>
