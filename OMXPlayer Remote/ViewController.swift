@@ -20,7 +20,6 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
     @IBOutlet weak var seekForwardButton: UIButton!
     @IBOutlet weak var seekFastBackwardButton: UIButton!
     @IBOutlet weak var seekFastForwardButton: UIButton!
-    @IBOutlet weak var playingLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -75,7 +74,7 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
     
     func playFile(path: String)
     {
-        self.playingLabel.text = "Playing : \((path as NSString).lastPathComponent)"
+        self.title = "\((path as NSString).lastPathComponent)"
         self.enableMediaControls(true)
         self.sendCommandToPlayer([kCommandKey: kPlayCommand, kPathKey: path])
     }
@@ -115,7 +114,7 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
 
     @IBAction func stopButtonPressed(sender: AnyObject)
     {
-        self.playingLabel.text = nil
+        self.title = nil
         self.enableMediaControls(false)
         self.sendCommandToPlayer([kCommandKey: kStopCommand])
     }
@@ -142,7 +141,7 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
     
     @IBAction func poweroffButtonPressed(sender: AnyObject)
     {
-        self.playingLabel.text = nil
+        self.title = nil
         self.enableMediaControls(false)
         self.sendCommandToPlayer([kCommandKey: kPoweroffCommand])
     }
@@ -216,14 +215,14 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
         case kPlayingFinishedCommand:
             dispatch_async(dispatch_get_main_queue())
             {
-                self.playingLabel.text = nil
+                self.title = nil
                 self.enableMediaControls(false)
             }
         case kIsPlayingCommand:
             let path = data.objectForKey(kPathKey) as! NSString
             dispatch_async(dispatch_get_main_queue())
             {
-                self.playingLabel.text = path.length > 0 ? "Playing : \(path.lastPathComponent)" : ""
+                self.title = path.length > 0 ? "Playing : \(path.lastPathComponent)" : nil
                 self.enableMediaControls(path.length > 0)
             }            
             

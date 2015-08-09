@@ -111,20 +111,6 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pQu-xa-AZ3">
-                                <rect key="frame" x="105" y="324" width="391" height="74"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="fUq-fX-lmH">
-                                        <rect key="frame" x="8" y="14" width="375" height="46"/>
-                                        <animations/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <animations/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRm-UJ-kLE">
                                 <rect key="frame" x="267" y="438" width="66" height="30"/>
                                 <animations/>
@@ -137,7 +123,6 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pQu-xa-AZ3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AcZ-gB-GmV"/>
                             <constraint firstItem="lc3-LV-2yQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KGh-rw-0uj"/>
                             <constraint firstItem="CRm-UJ-kLE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p3C-ep-dB4"/>
                         </constraints>
@@ -147,7 +132,6 @@
                         <outlet property="browseButton" destination="nC7-Pf-74I" id="wzL-Qr-ylG"/>
                         <outlet property="ipAddressTextField" destination="yIE-f3-E6l" id="Ab1-SL-haT"/>
                         <outlet property="pauseButton" destination="adX-du-zBz" id="9tc-QA-L7p"/>
-                        <outlet property="playingLabel" destination="fUq-fX-lmH" id="U17-5C-Nvp"/>
                         <outlet property="portTextField" destination="A2N-f3-dPb" id="azH-Q7-iJs"/>
                         <outlet property="seekBackwardButton" destination="LoA-eV-ndu" id="L9s-Wk-6Kw"/>
                         <outlet property="seekFastBackwardButton" destination="8qO-6u-Rkd" id="YxC-Cj-lWT"/>
