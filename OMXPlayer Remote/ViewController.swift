@@ -174,12 +174,6 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
     {
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
-        actionSheetController.addAction(UIAlertAction(title: "Refresh playing status", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
-            self.title = nil
-            self.enableMediaControls(false)
-            self.sendCommandToPlayer([kCommandKey: kPoweroffCommand])
-        }))
-        
         actionSheetController.addAction(UIAlertAction(title: "Poweroff", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
             self.title = nil
             self.enableMediaControls(false)
