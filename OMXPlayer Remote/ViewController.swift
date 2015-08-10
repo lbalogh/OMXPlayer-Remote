@@ -37,10 +37,7 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
         
         self.ipAddressTextField.text =  NSUserDefaults.standardUserDefaults().stringForKey(kHostIpAddressKey);
         self.portTextField.text =  NSUserDefaults.standardUserDefaults().stringForKey(kHostPortKey);
-    }
-    
-    override func viewWillAppear(animated: Bool)
-    {
+        
         // Check if a movie is playing
         if !self.ipAddressTextField.text!.isEmpty && !self.portTextField.text!.isEmpty
         {
@@ -139,6 +136,15 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
         self.sendCommandToPlayer([kCommandKey: kSeekFastForwardCommand])
     }
     
+    @IBAction func refreshButtonPressed(sender: AnyObject)
+    {
+        // Check if a movie is playing
+        if !self.ipAddressTextField.text!.isEmpty && !self.portTextField.text!.isEmpty
+        {
+            self.sendCommandToPlayer([kCommandKey: kIsPlayingCommand]);
+        }
+    }
+    
     @IBAction func subtitleButtonPressed(sender: AnyObject)
     {
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
@@ -167,6 +173,12 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
     @IBAction func actionButtonPressed(sender: AnyObject)
     {
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        
+        actionSheetController.addAction(UIAlertAction(title: "Refresh playing status", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+            self.title = nil
+            self.enableMediaControls(false)
+            self.sendCommandToPlayer([kCommandKey: kPoweroffCommand])
+        }))
         
         actionSheetController.addAction(UIAlertAction(title: "Poweroff", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
             self.title = nil

@@ -136,7 +136,13 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="IBi-t1-oBy"/>
+                    <navigationItem key="navigationItem" id="IBi-t1-oBy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="twl-F9-y23">
+                            <connections>
+                                <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" id="HPy-2w-TOL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="browseButton" destination="nC7-Pf-74I" id="wzL-Qr-ylG"/>
                         <outlet property="ipAddressTextField" destination="yIE-f3-E6l" id="Ab1-SL-haT"/>
