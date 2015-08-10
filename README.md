@@ -16,7 +16,7 @@ Install *python-omxplayer-wrapper* :
 sudo apt-get install python-setuptools
 git clone https://github.com/willprice/python-omxplayer-wrapper.git
 cd python-omxplayer-wrapper
-python setup.py install
+sudo python setup.py install
 ```
 
 Then, edit the server python script (*OMXPlayerServer.py*) and adapt the following variables :
