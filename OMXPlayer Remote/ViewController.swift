@@ -139,12 +139,46 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
         self.sendCommandToPlayer([kCommandKey: kSeekFastForwardCommand])
     }
     
-    @IBAction func poweroffButtonPressed(sender: AnyObject)
+    @IBAction func subtitleButtonPressed(sender: AnyObject)
     {
-        self.title = nil
-        self.enableMediaControls(false)
-        self.sendCommandToPlayer([kCommandKey: kPoweroffCommand])
+        let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        
+        actionSheetController.addAction(UIAlertAction(title: "Next subtitle stream", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+            self.sendCommandToPlayer([kCommandKey: kNextSubtitleStream])
+        }))
+        
+        actionSheetController.addAction(UIAlertAction(title: "Previous subtitle stream", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+            self.sendCommandToPlayer([kCommandKey: kPreviousSubtitleStream])
+        }))
+        
+        actionSheetController.addAction(UIAlertAction(title: "Delay subtitle (+ 250ms)", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+            self.sendCommandToPlayer([kCommandKey: kSubtitleDelayForward])
+        }))
+        
+        actionSheetController.addAction(UIAlertAction(title: "Delay subtitle (- 250ms)", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+            self.sendCommandToPlayer([kCommandKey: kSubtitleDelayBackward])
+        }))
+        
+        actionSheetController.addAction( UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        
+        presentViewController(actionSheetController, animated: true, completion: nil)
     }
+    
+    @IBAction func actionButtonPressed(sender: AnyObject)
+    {
+        let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        
+        actionSheetController.addAction(UIAlertAction(title: "Poweroff", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+            self.title = nil
+            self.enableMediaControls(false)
+            self.sendCommandToPlayer([kCommandKey: kPoweroffCommand])
+        }))
+        
+        actionSheetController.addAction( UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
+        
+        presentViewController(actionSheetController, animated: true, completion: nil)
+    }
+
     
     // MARK:Networking
     
