@@ -33,6 +33,15 @@ Finally, start the server :
 python OMXPlayerServer.py
 ```
 
+To make the server start automatically on boot, add this to *~/.config/autostart/omxplayer-remote.desktop* :
+
+```
+[Desktop Entry]
+Encoding=UTF-8
+Name=OMXPlayer Remote autostart
+Exec=/usr/bin/lxterminal -e 'python /home/pi/OMXPlayerServer.py'
+```
+
 ### On MacOS X ###
 
 Open the *OMXPlayer Remote* project in XCode. On the toolbar, select *OMXPlayer Remote*, a destination device (eg. *iPhone 6*), then click *Play*. The app should start in the simulator.
