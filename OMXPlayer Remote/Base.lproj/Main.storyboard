@@ -128,12 +128,21 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="49a-Fe-Cbw" secondAttribute="bottom" id="CGQ-0f-NKc"/>
                             <constraint firstItem="lc3-LV-2yQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KGh-rw-0uj"/>
                             <constraint firstAttribute="trailing" secondItem="49a-Fe-Cbw" secondAttribute="trailing" id="eLP-Nx-TXj"/>
                             <constraint firstItem="49a-Fe-Cbw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="v47-SK-Ko5"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="NFJ-3a-hwh" appends="YES" id="0PA-YZ-ABB"/>
+                            <outletCollection property="gestureRecognizers" destination="sVm-Um-Vbn" appends="YES" id="jgp-gr-YBo"/>
+                            <outletCollection property="gestureRecognizers" destination="uTU-59-6hh" appends="YES" id="nHe-mx-O0h"/>
+                            <outletCollection property="gestureRecognizers" destination="qrA-gt-mHF" appends="YES" id="qXr-YF-kjB"/>
+                            <outletCollection property="gestureRecognizers" destination="F9K-uN-ZRn" appends="YES" id="Zwl-yu-Waq"/>
+                            <outletCollection property="gestureRecognizers" destination="3a7-00-Z7D" appends="YES" id="Afd-pI-7JP"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="IBi-t1-oBy">
@@ -157,6 +166,36 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="NFJ-3a-hwh">
+                    <connections>
+                        <action selector="seekBackwardButtonPressed:" destination="BYZ-38-t0r" id="nhz-6U-4Kh"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="sVm-Um-Vbn">
+                    <connections>
+                        <action selector="seekForwardButtonPressed:" destination="BYZ-38-t0r" id="kC1-W4-1Uz"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="uTU-59-6hh">
+                    <connections>
+                        <action selector="seekFastBackwardButtonPressed:" destination="BYZ-38-t0r" id="cYX-K9-GMc"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" numberOfTouchesRequired="2" id="qrA-gt-mHF">
+                    <connections>
+                        <action selector="seekFastForwardButtonPressed:" destination="BYZ-38-t0r" id="u7p-kU-pRg"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="F9K-uN-ZRn">
+                    <connections>
+                        <action selector="swipedUpWithOneFinger:" destination="BYZ-38-t0r" id="dgY-p2-PEn"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="3a7-00-Z7D">
+                    <connections>
+                        <action selector="swipedDownWithOneFinger:" destination="BYZ-38-t0r" id="fq3-Yo-28m"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2521" y="359"/>
         </scene>

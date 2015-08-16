@@ -185,7 +185,16 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
         presentViewController(actionSheetController, animated: true, completion: nil)
     }
 
+    @IBAction func swipedUpWithOneFinger(sender: AnyObject)
+    {
+        self.sendCommandToPlayer([kCommandKey: kIncreaseSubtitleDelay])
+    }
     
+    @IBAction func swipedDownWithOneFinger(sender: AnyObject)
+    {
+        self.sendCommandToPlayer([kCommandKey: kDecreaseSubtitleDelay])
+    }
+
     // MARK:Networking
     
     func sendCommandToPlayer(command: AnyObject)
