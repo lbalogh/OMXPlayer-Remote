@@ -7,16 +7,16 @@ import json
 import os
 import shutil
 import time
+import sys
+import getopt
 
-HOME_PATH		= '/mnt/Download/Temp'	# home path when browsing from iPhone
-HOST_NAME		= '192.168.10.116'	# ip adress of the raspberry pi
-PORT			= 10023			# listening port
 SUPPORTED_FORMATS	= ('.mkv', '.avi', '.mp4', '.mov')
 
 class ServerHandler(BaseHTTPRequestHandler):
 	def do_POST(self):
 		global player
 		global filename
+		global home_path
 
 		jsonData = json.loads(self.rfile.read(int(self.headers.getheader('content-length'))))
 
@@ -64,7 +64,7 @@ class ServerHandler(BaseHTTPRequestHandler):
 			#playing = False if not 'player' in globals() else player.is_playing()
 			SendResponse(self, {'command': command, 'path': filename})
 		elif command == 'list_dir':
-			path = jsonData['path'] if 'path' in jsonData else HOME_PATH
+			path = jsonData['path'] if 'path' in jsonData else home_path
 
 			files = [f for f in os.listdir(path) if os.path.isfile(os.path.join(path, f)) and os.path.splitext(f)[1] in SUPPORTED_FORMATS]
 			dirs = [f for f in os.listdir(path) if os.path.isdir(os.path.join(path, f))]
@@ -86,9 +86,31 @@ def SendResponse(self, response):
 	self.end_headers()
 	self.wfile.write(json.dumps(response))
 
+def PrintUsage():
+	print 'Usage : python OMXPlayerServer.py -a <server ip> -p <server port> -d <home path>'
+
 if __name__ == '__main__':
+	server_ip = ''
+	server_port = ''
+	home_path = ''
 	filename = ''
 
-	httpd = ThreadedHTTPServer((HOST_NAME, PORT), ServerHandler)
-	httpd.serve_forever()
+	try:
+		opts, args = getopt.getopt(sys.argv[1:], 'ha:p:d:')
+	except getopt.GetoptError:
+		PrintUsage()
+		sys.exit(2)
 
+	for opt, arg in opts:
+		if opt == '-h':
+			PrintUsage()
+			sys.exit()
+		elif opt in ("-a"):
+			server_ip = arg
+		elif opt in ("-p"):
+			server_port = arg
+		elif opt in ("-d"):
+			home_path = arg
+
+	httpd = ThreadedHTTPServer((server_ip, int(server_port)), ServerHandler)
+	httpd.serve_forever()

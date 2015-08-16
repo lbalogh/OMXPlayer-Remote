@@ -19,18 +19,20 @@ cd python-omxplayer-wrapper
 sudo python setup.py install
 ```
 
-Then, edit the server python script (*OMXPlayerServer.py*) and adapt the following variables :
+Get the server script :
 
 ```
-HOME_PATH               = '/mnt/Download/Temp'  # home path when browsing from iPhone
-HOST_NAME               = '192.168.10.116'      # ip adress of the raspberry pi
-PORT                    = 10023                 # listening port
+wget https://raw.githubusercontent.com/lbalogh/OMXPlayer-Remote/master/OMXPlayerServer.py
 ```
 
-Finally, start the server :
+And start it :
 
 ```
-python OMXPlayerServer.py
+python OMXPlayerServer.py -a 192.168.10.109 -p 10026 -d /mnt/Downloads
+
+-a : ip address of the Raspberry PI
+-p : listening port
+-d : home path when browsing from the phone
 ```
 
 To make the server start automatically on boot, add this to *~/.config/autostart/omxplayer-remote.desktop* :
@@ -39,7 +41,7 @@ To make the server start automatically on boot, add this to *~/.config/autostart
 [Desktop Entry]
 Encoding=UTF-8
 Name=OMXPlayer Remote autostart
-Exec=/usr/bin/lxterminal -e 'python /home/pi/OMXPlayerServer.py'
+Exec=/usr/bin/lxterminal -e 'python /home/pi/OMXPlayerServer.py -a 192.168.10.109 -p 10026 -d /mnt/Downloads'
 ```
 
 ### On MacOS X ###
