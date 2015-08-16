@@ -24,16 +24,24 @@ class ServerHandler(BaseHTTPRequestHandler):
 		print jsonData
 
 		command = jsonData['command'];
-		if command == 'pause' and 'player' in globals(): 
+		if command == 'pause' and 'player' in globals():
 			player.pause()
 		elif command == 'seek_backward' and 'player' in globals():
 			player.action(19)
 		elif command == 'seek_forward' and 'player' in globals():
 			player.action(20)
-		elif command == 'seek_fast_forward' and 'player' in globals():
-			player.action(22)
 		elif command == 'seek_fast_backward' and 'player' in globals():
 			player.action(21)
+		elif command == 'seek_fast_forward' and 'player' in globals():
+			player.action(22)
+		elif command == 'previous_subtitle_stream' and 'player' in globals():
+			player.action(10)
+		elif command == 'next_subtitle_stream' and 'player' in globals():
+			player.action(11)
+		elif command == 'decrease_subtitle_delay' and 'player' in globals():
+			player.action(13)
+		elif command == 'increase_subtitle_delay' and 'player' in globals():
+			player.action(14)
 		elif command == 'stop' and 'player' in globals():
 			filename = ''
 			player.stop()
@@ -43,7 +51,7 @@ class ServerHandler(BaseHTTPRequestHandler):
 		elif command == 'delete_folder':
 			shutil.rmtree(jsonData['path'])
 		elif command == 'poweroff':
-			call(['sudo', 'poweroff'])	
+			call(['sudo', 'poweroff'])
 		elif command == 'play':
 			if 'player' in globals():
 				player.stop()
@@ -67,16 +75,16 @@ class ServerHandler(BaseHTTPRequestHandler):
 			SendResponse(self, {'command': command, 'path': path, 'files': files, 'dirs': dirs})
 
 class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
-    """Handle requests in a separate thread."""
+	"""Handle requests in a separate thread."""
 
 def SendResponse(self, response):
 	print 'Sending data to phone :'
 	print response
 
 	self.send_response(200)
-        self.send_header('Content-Type', 'application/json')
-        self.end_headers()
-        self.wfile.write(json.dumps(response))
+	self.send_header('Content-Type', 'application/json')
+	self.end_headers()
+	self.wfile.write(json.dumps(response))
 
 if __name__ == '__main__':
 	filename = ''

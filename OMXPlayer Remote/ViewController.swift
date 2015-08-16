@@ -158,11 +158,11 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
         }))
         
         actionSheetController.addAction(UIAlertAction(title: "Delay subtitle (+ 250ms)", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
-            self.sendCommandToPlayer([kCommandKey: kSubtitleDelayForward])
+            self.sendCommandToPlayer([kCommandKey: kIncreaseSubtitleDelay])
         }))
         
         actionSheetController.addAction(UIAlertAction(title: "Delay subtitle (- 250ms)", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
-            self.sendCommandToPlayer([kCommandKey: kSubtitleDelayBackward])
+            self.sendCommandToPlayer([kCommandKey: kDecreaseSubtitleDelay])
         }))
         
         actionSheetController.addAction( UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
