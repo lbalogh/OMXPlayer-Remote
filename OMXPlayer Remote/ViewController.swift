@@ -243,7 +243,11 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
                     return
                 }
                 
-                self.dataReceivedFromPlayer(dict);
+                // Process received data in main queue (because UI updates must be done in main queue)
+                dispatch_async(dispatch_get_main_queue())
+                {
+                    self.dataReceivedFromPlayer(dict);
+                }
             }
         }
         
@@ -257,24 +261,14 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
         switch data.objectForKey(kCommandKey) as! String
         {
         case kListDirCommand:
-            dispatch_async(dispatch_get_main_queue())
-            {
-                NSNotificationCenter.defaultCenter().postNotificationName(kReloadFileListNotification, object: data)
-            }
+            NSNotificationCenter.defaultCenter().postNotificationName(kReloadFileListNotification, object: data)
         case kPlayingFinishedCommand:
-            dispatch_async(dispatch_get_main_queue())
-            {
-                self.title = nil
-                self.enableMediaControls(false)
-            }
+            self.title = nil
+            self.enableMediaControls(false)
         case kIsPlayingCommand:
             let path = data.objectForKey(kPathKey) as! NSString
-            dispatch_async(dispatch_get_main_queue())
-            {
-                self.title = path.length > 0 ? "Playing : \(path.lastPathComponent)" : nil
-                self.enableMediaControls(path.length > 0)
-            }            
-            
+            self.title = path.length > 0 ? "Playing : \(path.lastPathComponent)" : nil
+            self.enableMediaControls(path.length > 0)
         default:
             print("Unknown command received from player : \(data.objectForKey(kCommandKey))")
         }
