@@ -10,7 +10,7 @@ import time
 import sys
 import getopt
 
-SUPPORTED_FORMATS	= ('.mkv', '.avi', '.mp4', '.mov')
+SUPPORTED_FORMATS	= ('.mkv', '.avi', '.mp4', '.mov', '.srt')
 
 class ServerHandler(BaseHTTPRequestHandler):
 	def do_POST(self):

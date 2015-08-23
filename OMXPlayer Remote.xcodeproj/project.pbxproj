@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		822D58851B8A61E5009DF4FE /* subtitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 822D58841B8A61E5009DF4FE /* subtitle.png */; };
 		82A1EBD71B8A3C7D00B044C9 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBD51B8A3C7D00B044C9 /* folder.png */; };
 		82A1EBD81B8A3C7D00B044C9 /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBD61B8A3C7D00B044C9 /* movie.png */; };
 		82A1EBDF1B8A445600B044C9 /* play_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBD91B8A445600B044C9 /* play_pause.png */; };
@@ -75,6 +76,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		822D58841B8A61E5009DF4FE /* subtitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subtitle.png; sourceTree = "<group>"; };
 		82A1EBD51B8A3C7D00B044C9 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
 		82A1EBD61B8A3C7D00B044C9 /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
 		82A1EBD91B8A445600B044C9 /* play_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_pause.png; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				82A1EBDE1B8A445600B044C9 /* stop.png */,
 				82A1EBD51B8A3C7D00B044C9 /* folder.png */,
 				82A1EBD61B8A3C7D00B044C9 /* movie.png */,
+				822D58841B8A61E5009DF4FE /* subtitle.png */,
 				82EAFF801B6D00D300F76156 /* Info.plist */,
 			);
 			path = "OMXPlayer Remote";
@@ -294,6 +297,7 @@
 				82A1EBD71B8A3C7D00B044C9 /* folder.png in Resources */,
 				82A1EBE41B8A445600B044C9 /* stop.png in Resources */,
 				82A1EBE31B8A445600B044C9 /* seek_forward.png in Resources */,
+				822D58851B8A61E5009DF4FE /* subtitle.png in Resources */,
 				82A1EBE21B8A445600B044C9 /* seek_fast_forward.png in Resources */,
 				82EAFF7C1B6D00D300F76156 /* Assets.xcassets in Resources */,
 				82A1EBDF1B8A445600B044C9 /* play_pause.png in Resources */,

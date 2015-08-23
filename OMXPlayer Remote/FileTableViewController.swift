@@ -33,6 +33,8 @@ class FileTableViewController: UITableViewController {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: kReloadFileListNotification, object: nil)
     }
     
+    // MARK: - Selectors
+    
     func reloadData(notification: NSNotification)
     {
         self.fileList = notification.object as? NSDictionary
@@ -101,8 +103,10 @@ class FileTableViewController: UITableViewController {
         {
             // It's a file
             let files = self.fileList!.objectForKey(kFilesKey)  as! NSArray
-            cell.textLabel!.text = files.objectAtIndex(indexPath.row) as? String
-            cell.imageView!.image = UIImage(named: "movie.png")
+            let fileName = files.objectAtIndex(indexPath.row) as! String
+
+            cell.textLabel!.text = fileName
+            cell.imageView!.image = isSelectedFileASubtitle(fileName) ? UIImage(named: "subtitle.png") : UIImage(named: "movie.png")
         }
 
         
@@ -132,9 +136,12 @@ class FileTableViewController: UITableViewController {
         }
         else
         {
-            // Play selected file
-            self.delegate.playFile("\(path)/\(cell.textLabel!.text!)")
-            self.navigationController?.popViewControllerAnimated(true)
+            // Play selected file (or do nothing if a subtitle is selected)
+            if !isSelectedFileASubtitle(cell.textLabel!.text!)
+            {
+                self.delegate.playFile("\(path)/\(cell.textLabel!.text!)")
+                self.navigationController?.popViewControllerAnimated(true)
+            }
         }
     }
 
@@ -178,5 +185,17 @@ class FileTableViewController: UITableViewController {
             
             presentViewController(alert, animated: true, completion: nil)
         }
+    }
+    
+    // MARK: - Helpers
+    
+    func isSelectedFileASubtitle(fileName: String) -> Bool
+    {
+        if let range = fileName.lowercaseString.rangeOfString(".srt", options:NSStringCompareOptions.BackwardsSearch)
+        {
+            return range.endIndex == fileName.endIndex
+        }
+
+        return false
     }
 }
