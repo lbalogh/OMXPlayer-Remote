@@ -21,6 +21,7 @@ let kSeekForwardCommand         = "seek_forward";
 let kSeekFastBackwardCommand    = "seek_fast_backward";
 let kSeekFastForwardCommand     = "seek_fast_forward";
 let kPoweroffCommand            = "poweroff";
+let kRebootCommand              = "reboot";
 let kPreviousSubtitleStream     = "previous_subtitle_stream";
 let kNextSubtitleStream         = "next_subtitle_stream";
 let kIncreaseSubtitleDelay      = "increase_subtitle_delay";

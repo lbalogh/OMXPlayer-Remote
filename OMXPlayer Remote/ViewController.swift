@@ -174,6 +174,12 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
     {
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
+        actionSheetController.addAction(UIAlertAction(title: "Reboot", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+            self.title = nil
+            self.enableMediaControls(false)
+            self.sendCommandToPlayer([kCommandKey: kRebootCommand])
+        }))
+
         actionSheetController.addAction(UIAlertAction(title: "Poweroff", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
             self.title = nil
             self.enableMediaControls(false)

@@ -52,6 +52,8 @@ class ServerHandler(BaseHTTPRequestHandler):
 			shutil.rmtree(jsonData['path'])
 		elif command == 'poweroff':
 			call(['sudo', 'poweroff'])
+		elif command == 'reboot':
+			call(['sudo', 'reboot'])
 		elif command == 'play':
 			if 'player' in globals():
 				player.stop()
