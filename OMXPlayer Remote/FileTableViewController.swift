@@ -147,7 +147,7 @@ class FileTableViewController: UITableViewController {
                 let path = self.fileList!.objectForKey(kPathKey) as! String
                 if indexPath.section == 0
                 {
-                    // Delete the selected director
+                    // Delete the selected directory
                     let dirs = self.fileList!.objectForKey(kDirsKey) as! NSMutableArray
                     dirs.removeObjectAtIndex(indexPath.row - 1)
                     self.delegate.deleteFolder("\(path)/\(cell.textLabel!.text!)")
