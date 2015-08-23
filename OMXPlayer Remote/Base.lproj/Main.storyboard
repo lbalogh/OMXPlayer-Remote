@@ -23,7 +23,7 @@
                                         <rect key="frame" x="109" y="8" width="121" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="ipAddressTextFieldEdited:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Kap-42-6xe"/>
                                         </connections>
@@ -32,7 +32,7 @@
                                         <rect key="frame" x="238" y="8" width="60" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <connections>
                                             <action selector="portTextFieldEdited:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="1TX-fu-5Kg"/>
                                         </connections>
@@ -226,6 +226,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Open file" id="enY-rm-0gK"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="8PP-FW-SjT">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xG0-5E-cPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

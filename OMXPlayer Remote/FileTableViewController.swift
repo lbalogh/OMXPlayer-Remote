@@ -24,7 +24,8 @@ class FileTableViewController: UITableViewController {
     {
         super.viewDidLoad()
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadList:", name: kReloadFileListNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadData:", name: kReloadFileListNotification, object: nil)
+        self.refreshControl?.addTarget(self, action: "refreshCurrentDirectory:", forControlEvents: UIControlEvents.ValueChanged)
     }
     
     override func viewDidDisappear(animated: Bool)
@@ -32,10 +33,19 @@ class FileTableViewController: UITableViewController {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: kReloadFileListNotification, object: nil)
     }
     
-    func reloadList(notification: NSNotification)
+    func reloadData(notification: NSNotification)
     {
         self.fileList = notification.object as? NSDictionary
         self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+    }
+    
+    func refreshCurrentDirectory(sender:AnyObject)
+    {
+        if (self.fileList != nil)
+        {
+            self.delegate.updateFileList(fileList!.objectForKey(kPathKey) as! String)
+        }
     }
 
     // MARK: - Table view data source
