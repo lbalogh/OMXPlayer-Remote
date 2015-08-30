@@ -257,7 +257,7 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
             switch dict.objectForKey(kCommandKey) as! String
             {
             case kListDirCommand:
-                NSNotificationCenter.defaultCenter().postNotificationName(kReloadFileListNotification, object: data)
+                NSNotificationCenter.defaultCenter().postNotificationName(kReloadFileListNotification, object: dict)
             case kPlayingFinishedCommand:
                 self.title = nil
                 self.enableMediaControls(false)
