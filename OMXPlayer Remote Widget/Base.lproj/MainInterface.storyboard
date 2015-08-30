@@ -87,14 +87,10 @@
                             <constraint firstItem="xeI-X5-Ik1" firstAttribute="leading" secondItem="FcG-Zc-14s" secondAttribute="trailing" constant="26" id="FTu-Nr-yZN"/>
                             <constraint firstItem="xeI-X5-Ik1" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="H0E-Zl-lad"/>
                             <constraint firstItem="LId-jp-qJ6" firstAttribute="leading" secondItem="xeI-X5-Ik1" secondAttribute="trailing" constant="26" id="Otw-a6-zpL"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="mJe-96-0bV" secondAttribute="bottom" constant="10" id="U7H-Br-T6w"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="A50-ku-DwI" secondAttribute="bottom" constant="10" id="ctv-yd-UuQ"/>
                             <constraint firstItem="A50-ku-DwI" firstAttribute="leading" secondItem="mJe-96-0bV" secondAttribute="trailing" constant="26" id="f4e-Yu-oWX"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="FcG-Zc-14s" secondAttribute="bottom" constant="10" id="hka-Xu-GTF"/>
                             <constraint firstItem="FcG-Zc-14s" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="nCK-PS-u25"/>
                             <constraint firstItem="mJe-96-0bV" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="oBs-Sy-4Jv"/>
                             <constraint firstItem="LId-jp-qJ6" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="weQ-CX-5bm"/>
-                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="xeI-X5-Ik1" secondAttribute="bottom" constant="10" id="ztR-bd-cI1"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
