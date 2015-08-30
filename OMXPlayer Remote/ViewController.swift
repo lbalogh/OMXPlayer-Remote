@@ -7,9 +7,9 @@
 //
 
 import UIKit
-import WatchConnectivity;
+import WatchConnectivity
 
-class ViewController: UIViewController, WCSessionDelegate, FileTableViewControllerDelegate {
+class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegate, FileTableViewControllerDelegate {
 
     @IBOutlet weak var ipAddressTextField: UITextField!
     @IBOutlet weak var portTextField: UITextField!
@@ -20,6 +20,8 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
     @IBOutlet weak var seekForwardButton: UIButton!
     @IBOutlet weak var seekFastBackwardButton: UIButton!
     @IBOutlet weak var seekFastForwardButton: UIButton!
+    
+    let networkHandler = NetworkHandler()
     
     override func viewDidLoad()
     {
@@ -35,14 +37,33 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
             print("WCSession initialized")
         }
         
-        self.ipAddressTextField.text =  NSUserDefaults.standardUserDefaults().stringForKey(kHostIpAddressKey);
-        self.portTextField.text =  NSUserDefaults.standardUserDefaults().stringForKey(kHostPortKey);
+        networkHandler.delegate = self
+
+        self.ipAddressTextField.text = NSUserDefaults(suiteName: "group.com.balogh.OMXPlayer-Remote")!.stringForKey(kHostIpAddressKey)
+        self.portTextField.text = NSUserDefaults(suiteName: "group.com.balogh.OMXPlayer-Remote")!.stringForKey(kHostPortKey)
+
+        // Register to application state change notifications
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:Selector("refreshPlayingStatus"), name:UIApplicationDidBecomeActiveNotification, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:Selector("applicationWillTerminate"), name:UIApplicationWillTerminateNotification, object:nil)
         
-        // Check if a movie is playing
+        self.refreshPlayingStatus()
+    }
+    
+    func refreshPlayingStatus()
+    {
+        print("Application did became active")
+
+        // Check if a movie is playing, and refresh title and media controls
         if !self.ipAddressTextField.text!.isEmpty && !self.portTextField.text!.isEmpty
         {
-            self.sendCommandToPlayer([kCommandKey: kIsPlayingCommand]);
+            self.sendCommandToPlayer([kCommandKey: kIsPlayingCommand])
         }
+    }
+    
+    func applicationWillTerminate()
+    {
+        print("Application will terminate")
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
         
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
@@ -50,7 +71,7 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
         if segue.destinationViewController is FileTableViewController
         {
             let fileTableViewController = segue.destinationViewController as! FileTableViewController
-            fileTableViewController.delegate = self;
+            fileTableViewController.delegate = self
         }
     }
     
@@ -90,12 +111,12 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
 
     @IBAction func ipAddressTextFieldEdited(sender: AnyObject)
     {
-        NSUserDefaults.standardUserDefaults().setValue(self.ipAddressTextField.text, forKey: kHostIpAddressKey)
+        NSUserDefaults(suiteName: "group.com.balogh.OMXPlayer-Remote")!.setValue(self.ipAddressTextField.text, forKey: kHostIpAddressKey)
     }
 
     @IBAction func portTextFieldEdited(sender: AnyObject)
     {
-        NSUserDefaults.standardUserDefaults().setValue(self.portTextField.text, forKey: kHostPortKey)
+        NSUserDefaults(suiteName: "group.com.balogh.OMXPlayer-Remote")!.setValue(self.portTextField.text, forKey: kHostPortKey)
     }
     
     @IBAction func browseButtonPressed(sender: AnyObject)
@@ -141,7 +162,7 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
         // Check if a movie is playing
         if !self.ipAddressTextField.text!.isEmpty && !self.portTextField.text!.isEmpty
         {
-            self.sendCommandToPlayer([kCommandKey: kIsPlayingCommand]);
+            self.sendCommandToPlayer([kCommandKey: kIsPlayingCommand])
         }
     }
     
@@ -207,76 +228,46 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
     {
         if self.ipAddressTextField.text!.isEmpty || self.portTextField.text!.isEmpty
         {
-            return;
+            return
         }
 
         print("Sending command to player : \(command)")
-        
-        let data: NSData
+        networkHandler.sendData("http://\(self.ipAddressTextField.text!):\(self.portTextField.text!)", dataDictonary: command)
+    }
+    
+    func dataReceived(data: NSData)
+    {
+        var dict: NSDictionary
         do
         {
-            // Convert the "command" array to JSON data
-            data = try NSJSONSerialization.dataWithJSONObject(command, options: [])
+            // Convert the response received from JSON data to NSDictionary
+            dict = try NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
         }
-        catch let error as NSError
+        catch
         {
             print("JSON error : \(error)")
             return
         }
         
-        let url = NSURL(string: "http://\(self.ipAddressTextField.text!):\(self.portTextField.text!)")!
-        let session = NSURLSession(configuration: NSURLSessionConfiguration.defaultSessionConfiguration())
+        print("Data received from player : \(dict)")
         
-        let request = NSMutableURLRequest(URL: url)
-        request.HTTPMethod = "POST"
-        
-        // Send the JSON data to the player
-        var uploadTask = NSURLSessionUploadTask()
-        uploadTask = session.uploadTaskWithRequest(request, fromData: data)
+        // Process received data in main queue (because UI updates must be done in main queue)
+        dispatch_async(dispatch_get_main_queue())
         {
-            (responseData, response, error) in
-            // Response received from the player
-            if responseData?.length > 0 {
-                var dict: NSDictionary
-                do
-                {
-                    // Convert the response received from JSON data to NSDictionary
-                    dict = try NSJSONSerialization.JSONObjectWithData(responseData!, options: NSJSONReadingOptions.MutableContainers) as! NSDictionary
-                }
-                catch
-                {
-                    print("JSON error : \(error)")
-                    return
-                }
-                
-                // Process received data in main queue (because UI updates must be done in main queue)
-                dispatch_async(dispatch_get_main_queue())
-                {
-                    self.dataReceivedFromPlayer(dict);
-                }
+            switch dict.objectForKey(kCommandKey) as! String
+            {
+            case kListDirCommand:
+                NSNotificationCenter.defaultCenter().postNotificationName(kReloadFileListNotification, object: data)
+            case kPlayingFinishedCommand:
+                self.title = nil
+                self.enableMediaControls(false)
+            case kIsPlayingCommand:
+                let path = dict.objectForKey(kPathKey) as! NSString
+                self.title = path.length > 0 ? "Playing : \(path.lastPathComponent)" : nil
+                self.enableMediaControls(path.length > 0)
+            default:
+                print("Unknown command received from player : \(dict.objectForKey(kCommandKey))")
             }
-        }
-        
-        uploadTask.resume()
-    }
-    
-    func dataReceivedFromPlayer(data: NSDictionary)
-    {
-        print("Data received from player : \(data)")
-
-        switch data.objectForKey(kCommandKey) as! String
-        {
-        case kListDirCommand:
-            NSNotificationCenter.defaultCenter().postNotificationName(kReloadFileListNotification, object: data)
-        case kPlayingFinishedCommand:
-            self.title = nil
-            self.enableMediaControls(false)
-        case kIsPlayingCommand:
-            let path = data.objectForKey(kPathKey) as! NSString
-            self.title = path.length > 0 ? "Playing : \(path.lastPathComponent)" : nil
-            self.enableMediaControls(path.length > 0)
-        default:
-            print("Unknown command received from player : \(data.objectForKey(kCommandKey))")
         }
     }
     
@@ -284,12 +275,12 @@ class ViewController: UIViewController, WCSessionDelegate, FileTableViewControll
     
     func enableMediaControls(enabled: Bool)
     {
-        self.pauseButton.enabled = enabled;
-        self.seekBackwardButton.enabled = enabled;
-        self.seekForwardButton.enabled = enabled;
-        self.seekFastBackwardButton.enabled = enabled;
-        self.seekFastForwardButton.enabled = enabled;
-        self.stopButton.enabled = enabled;
+        self.pauseButton.enabled = enabled
+        self.seekBackwardButton.enabled = enabled
+        self.seekForwardButton.enabled = enabled
+        self.seekFastBackwardButton.enabled = enabled
+        self.seekFastForwardButton.enabled = enabled
+        self.stopButton.enabled = enabled
     }
 }
 

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="15A262e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="M4Y-Lb-cyx">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
+    </dependencies>
+    <scenes>
+        <!--Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="OMXPlayer_Remote_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LId-jp-qJ6">
+                                <rect key="frame" x="139" y="8" width="42" height="42"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="KRu-yE-bDs"/>
+                                    <constraint firstAttribute="height" constant="42" id="U1f-ux-tC3"/>
+                                </constraints>
+                                <state key="normal" title="&gt;||" image="play_pause.png"/>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="DVp-tM-Fw7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeI-X5-Ik1">
+                                <rect key="frame" x="71" y="8" width="42" height="42"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="VsK-YE-YcX"/>
+                                    <constraint firstAttribute="width" constant="42" id="vMW-V9-9Re"/>
+                                </constraints>
+                                <state key="normal" title="&lt;" image="seek_backward.png"/>
+                                <connections>
+                                    <action selector="seekBackwardButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="cSo-47-tIp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A50-ku-DwI">
+                                <rect key="frame" x="275" y="8" width="42" height="42"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="6gT-U6-BYQ"/>
+                                    <constraint firstAttribute="width" constant="42" id="Bjc-cF-NHS"/>
+                                </constraints>
+                                <state key="normal" title="&gt;&gt;" image="seek_fast_forward.png"/>
+                                <connections>
+                                    <action selector="seekFastForwardButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="n19-to-6q0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcG-Zc-14s">
+                                <rect key="frame" x="3" y="8" width="42" height="42"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Es2-Ah-TmH"/>
+                                    <constraint firstAttribute="width" constant="42" id="wH6-vV-Whh"/>
+                                </constraints>
+                                <state key="normal" title="&lt;&lt;" image="seek_fast_backward.png"/>
+                                <connections>
+                                    <action selector="seekFastBackwardButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="KUb-bm-aFx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJe-96-0bV">
+                                <rect key="frame" x="207" y="8" width="42" height="42"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="6qy-2p-7Jc"/>
+                                    <constraint firstAttribute="width" constant="42" id="et4-r6-CKp"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2.2250738585072014e-308" height="0.0"/>
+                                <state key="normal" title="&gt;" image="seek_forward.png"/>
+                                <connections>
+                                    <action selector="seekForwardButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="bOM-ZQ-liA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <constraints>
+                            <constraint firstItem="FcG-Zc-14s" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="6f0-QM-rpV"/>
+                            <constraint firstItem="xeI-X5-Ik1" firstAttribute="leading" secondItem="FcG-Zc-14s" secondAttribute="trailing" constant="26" id="AAq-b8-mTf"/>
+                            <constraint firstItem="A50-ku-DwI" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="ERu-Mv-Jjd"/>
+                            <constraint firstItem="xeI-X5-Ik1" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="H0E-Zl-lad"/>
+                            <constraint firstItem="mJe-96-0bV" firstAttribute="leading" secondItem="LId-jp-qJ6" secondAttribute="trailing" constant="26" id="Y54-0a-UF8"/>
+                            <constraint firstItem="LId-jp-qJ6" firstAttribute="leading" secondItem="xeI-X5-Ik1" secondAttribute="trailing" constant="26" id="nwQ-fZ-5rD"/>
+                            <constraint firstItem="mJe-96-0bV" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="oBs-Sy-4Jv"/>
+                            <constraint firstItem="LId-jp-qJ6" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="ovZ-3D-HSZ"/>
+                            <constraint firstItem="A50-ku-DwI" firstAttribute="leading" secondItem="mJe-96-0bV" secondAttribute="trailing" constant="26" id="oxh-6i-Tla"/>
+                            <constraint firstItem="LId-jp-qJ6" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" constant="8" id="weQ-CX-5bm"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="60"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play_pause.png" width="256" height="256"/>
+        <image name="seek_backward.png" width="256" height="256"/>
+        <image name="seek_fast_backward.png" width="256" height="256"/>
+        <image name="seek_fast_forward.png" width="256" height="256"/>
+        <image name="seek_forward.png" width="256" height="256"/>
+    </resources>
+</document>

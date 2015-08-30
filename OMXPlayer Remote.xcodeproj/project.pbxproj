@@ -16,7 +16,19 @@
 		82A1EBE21B8A445600B044C9 /* seek_fast_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBDC1B8A445600B044C9 /* seek_fast_forward.png */; };
 		82A1EBE31B8A445600B044C9 /* seek_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBDD1B8A445600B044C9 /* seek_forward.png */; };
 		82A1EBE41B8A445600B044C9 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBDE1B8A445600B044C9 /* stop.png */; };
-		82A6C3871B761B6200C0AECB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A6C3861B761B6200C0AECB /* Constants.swift */; };
+		82E2CC1C1B931FAF005A19EA /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E2CC1B1B931FAF005A19EA /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
+		82E2CC1F1B931FAF005A19EA /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E2CC1E1B931FAF005A19EA /* TodayViewController.swift */; };
+		82E2CC221B931FAF005A19EA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82E2CC201B931FAF005A19EA /* MainInterface.storyboard */; };
+		82E2CC261B931FAF005A19EA /* OMXPlayer Remote Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 82E2CC191B931FAF005A19EA /* OMXPlayer Remote Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		82E2CC2B1B932435005A19EA /* play_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBD91B8A445600B044C9 /* play_pause.png */; settings = {ASSET_TAGS = (); }; };
+		82E2CC2D1B932492005A19EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFFAD1B6D05E400F76156 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
+		82E2CC2E1B932531005A19EA /* seek_backward.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBDA1B8A445600B044C9 /* seek_backward.png */; settings = {ASSET_TAGS = (); }; };
+		82E2CC2F1B932534005A19EA /* seek_fast_backward.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBDB1B8A445600B044C9 /* seek_fast_backward.png */; settings = {ASSET_TAGS = (); }; };
+		82E2CC301B932536005A19EA /* seek_fast_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBDC1B8A445600B044C9 /* seek_fast_forward.png */; settings = {ASSET_TAGS = (); }; };
+		82E2CC311B932539005A19EA /* seek_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBDD1B8A445600B044C9 /* seek_forward.png */; settings = {ASSET_TAGS = (); }; };
+		82E2CC341B93281B005A19EA /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E2CC331B93281B005A19EA /* NetworkHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		82E2CC351B932C1E005A19EA /* NetworkHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82E2CC331B93281B005A19EA /* NetworkHandler.swift */; settings = {ASSET_TAGS = (); }; };
+		82E2CC381B932FBC005A19EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFFAD1B6D05E400F76156 /* Constants.swift */; settings = {ASSET_TAGS = (); }; };
 		82EAFF751B6D00D300F76156 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFF741B6D00D300F76156 /* AppDelegate.swift */; };
 		82EAFF771B6D00D300F76156 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82EAFF761B6D00D300F76156 /* ViewController.swift */; };
 		82EAFF7A1B6D00D300F76156 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82EAFF781B6D00D300F76156 /* Main.storyboard */; };
@@ -34,6 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		82E2CC241B931FAF005A19EA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 82EAFF691B6D00D300F76156 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82E2CC181B931FAF005A19EA;
+			remoteInfo = "OMXPlayer Remote Widget";
+		};
 		82EAFF851B6D00D300F76156 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 82EAFF691B6D00D300F76156 /* Project object */;
@@ -51,6 +70,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		82E2CC2A1B931FB0005A19EA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				82E2CC261B931FAF005A19EA /* OMXPlayer Remote Widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82EAFFA51B6D00D400F76156 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,7 +115,14 @@
 		82A1EBDC1B8A445600B044C9 /* seek_fast_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seek_fast_forward.png; sourceTree = "<group>"; };
 		82A1EBDD1B8A445600B044C9 /* seek_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seek_forward.png; sourceTree = "<group>"; };
 		82A1EBDE1B8A445600B044C9 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
-		82A6C3861B761B6200C0AECB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		82E2CC191B931FAF005A19EA /* OMXPlayer Remote Widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "OMXPlayer Remote Widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82E2CC1B1B931FAF005A19EA /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		82E2CC1E1B931FAF005A19EA /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		82E2CC211B931FAF005A19EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		82E2CC231B931FAF005A19EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82E2CC331B93281B005A19EA /* NetworkHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHandler.swift; sourceTree = "<group>"; };
+		82E2CC361B932C3A005A19EA /* OMXPlayer Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "OMXPlayer Remote.entitlements"; sourceTree = "<group>"; };
+		82E2CC371B932C48005A19EA /* OMXPlayer Remote Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "OMXPlayer Remote Widget.entitlements"; sourceTree = "<group>"; };
 		82EAFF711B6D00D300F76156 /* OMXPlayer Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OMXPlayer Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82EAFF741B6D00D300F76156 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82EAFF761B6D00D300F76156 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +144,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		82E2CC161B931FAF005A19EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E2CC1C1B931FAF005A19EA /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82EAFF6E1B6D00D300F76156 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,12 +169,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82E2CC1A1B931FAF005A19EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82E2CC1B1B931FAF005A19EA /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82E2CC1D1B931FAF005A19EA /* OMXPlayer Remote Widget */ = {
+			isa = PBXGroup;
+			children = (
+				82E2CC371B932C48005A19EA /* OMXPlayer Remote Widget.entitlements */,
+				82E2CC1E1B931FAF005A19EA /* TodayViewController.swift */,
+				82E2CC201B931FAF005A19EA /* MainInterface.storyboard */,
+				82E2CC231B931FAF005A19EA /* Info.plist */,
+			);
+			path = "OMXPlayer Remote Widget";
+			sourceTree = "<group>";
+		};
+		82E2CC321B9325B2005A19EA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				82A1EBD91B8A445600B044C9 /* play_pause.png */,
+				82A1EBDA1B8A445600B044C9 /* seek_backward.png */,
+				82A1EBDB1B8A445600B044C9 /* seek_fast_backward.png */,
+				82A1EBDC1B8A445600B044C9 /* seek_fast_forward.png */,
+				82A1EBDD1B8A445600B044C9 /* seek_forward.png */,
+				82A1EBDE1B8A445600B044C9 /* stop.png */,
+				82A1EBD51B8A3C7D00B044C9 /* folder.png */,
+				82A1EBD61B8A3C7D00B044C9 /* movie.png */,
+				822D58841B8A61E5009DF4FE /* subtitle.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		82EAFF681B6D00D300F76156 = {
 			isa = PBXGroup;
 			children = (
 				82EAFF731B6D00D300F76156 /* OMXPlayer Remote */,
 				82EAFF871B6D00D300F76156 /* OMXPlayer Remote WatchKit App */,
 				82EAFF961B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension */,
+				82E2CC1D1B931FAF005A19EA /* OMXPlayer Remote Widget */,
+				82E2CC1A1B931FAF005A19EA /* Frameworks */,
 				82EAFF721B6D00D300F76156 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -140,6 +222,7 @@
 				82EAFF711B6D00D300F76156 /* OMXPlayer Remote.app */,
 				82EAFF831B6D00D300F76156 /* OMXPlayer Remote WatchKit App.app */,
 				82EAFF921B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension.appex */,
+				82E2CC191B931FAF005A19EA /* OMXPlayer Remote Widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,22 +230,16 @@
 		82EAFF731B6D00D300F76156 /* OMXPlayer Remote */ = {
 			isa = PBXGroup;
 			children = (
+				82E2CC361B932C3A005A19EA /* OMXPlayer Remote.entitlements */,
 				82EAFFAD1B6D05E400F76156 /* Constants.swift */,
 				82EAFF741B6D00D300F76156 /* AppDelegate.swift */,
 				82EAFF761B6D00D300F76156 /* ViewController.swift */,
 				82EAFFAF1B6D0F1900F76156 /* FileTableViewController.swift */,
+				82E2CC331B93281B005A19EA /* NetworkHandler.swift */,
 				82EAFF781B6D00D300F76156 /* Main.storyboard */,
 				82EAFF7B1B6D00D300F76156 /* Assets.xcassets */,
-				82A1EBD91B8A445600B044C9 /* play_pause.png */,
-				82A1EBDA1B8A445600B044C9 /* seek_backward.png */,
-				82A1EBDB1B8A445600B044C9 /* seek_fast_backward.png */,
-				82A1EBDC1B8A445600B044C9 /* seek_fast_forward.png */,
-				82A1EBDD1B8A445600B044C9 /* seek_forward.png */,
-				82A1EBDE1B8A445600B044C9 /* stop.png */,
-				82A1EBD51B8A3C7D00B044C9 /* folder.png */,
-				82A1EBD61B8A3C7D00B044C9 /* movie.png */,
-				822D58841B8A61E5009DF4FE /* subtitle.png */,
 				82EAFF801B6D00D300F76156 /* Info.plist */,
+				82E2CC321B9325B2005A19EA /* Images */,
 			);
 			path = "OMXPlayer Remote";
 			sourceTree = "<group>";
@@ -180,7 +257,6 @@
 		82EAFF961B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				82A6C3861B761B6200C0AECB /* Constants.swift */,
 				82EAFF971B6D00D400F76156 /* InterfaceController.swift */,
 				82EAFF991B6D00D400F76156 /* ExtensionDelegate.swift */,
 				82EAFF9B1B6D00D400F76156 /* GlanceController.swift */,
@@ -193,6 +269,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		82E2CC181B931FAF005A19EA /* OMXPlayer Remote Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82E2CC291B931FB0005A19EA /* Build configuration list for PBXNativeTarget "OMXPlayer Remote Widget" */;
+			buildPhases = (
+				82E2CC151B931FAF005A19EA /* Sources */,
+				82E2CC161B931FAF005A19EA /* Frameworks */,
+				82E2CC171B931FAF005A19EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OMXPlayer Remote Widget";
+			productName = "OMXPlayer Remote Widget";
+			productReference = 82E2CC191B931FAF005A19EA /* OMXPlayer Remote Widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		82EAFF701B6D00D300F76156 /* OMXPlayer Remote */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82EAFFAA1B6D00D400F76156 /* Build configuration list for PBXNativeTarget "OMXPlayer Remote" */;
@@ -201,11 +294,13 @@
 				82EAFF6E1B6D00D300F76156 /* Frameworks */,
 				82EAFF6F1B6D00D300F76156 /* Resources */,
 				82EAFFA91B6D00D400F76156 /* Embed Watch Content */,
+				82E2CC2A1B931FB0005A19EA /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				82EAFF861B6D00D300F76156 /* PBXTargetDependency */,
+				82E2CC251B931FAF005A19EA /* PBXTargetDependency */,
 			);
 			name = "OMXPlayer Remote";
 			productName = "OMXPlayer Remote";
@@ -255,9 +350,23 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ludovic Balogh";
 				TargetAttributes = {
+					82E2CC181B931FAF005A19EA = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = VKAA242EKN;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					82EAFF701B6D00D300F76156 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = VKAA242EKN;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					82EAFF821B6D00D300F76156 = {
 						CreatedOnToolsVersion = 7.0;
@@ -285,11 +394,25 @@
 				82EAFF701B6D00D300F76156 /* OMXPlayer Remote */,
 				82EAFF821B6D00D300F76156 /* OMXPlayer Remote WatchKit App */,
 				82EAFF911B6D00D400F76156 /* OMXPlayer Remote WatchKit Extension */,
+				82E2CC181B931FAF005A19EA /* OMXPlayer Remote Widget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		82E2CC171B931FAF005A19EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E2CC301B932536005A19EA /* seek_fast_forward.png in Resources */,
+				82E2CC311B932539005A19EA /* seek_forward.png in Resources */,
+				82E2CC2F1B932534005A19EA /* seek_fast_backward.png in Resources */,
+				82E2CC2B1B932435005A19EA /* play_pause.png in Resources */,
+				82E2CC2E1B932531005A19EA /* seek_backward.png in Resources */,
+				82E2CC221B931FAF005A19EA /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82EAFF6F1B6D00D300F76156 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +451,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		82E2CC151B931FAF005A19EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82E2CC1F1B931FAF005A19EA /* TodayViewController.swift in Sources */,
+				82E2CC351B932C1E005A19EA /* NetworkHandler.swift in Sources */,
+				82E2CC381B932FBC005A19EA /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82EAFF6D1B6D00D300F76156 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -335,6 +468,7 @@
 				82EAFF771B6D00D300F76156 /* ViewController.swift in Sources */,
 				82EAFF751B6D00D300F76156 /* AppDelegate.swift in Sources */,
 				82EAFFAE1B6D05E400F76156 /* Constants.swift in Sources */,
+				82E2CC341B93281B005A19EA /* NetworkHandler.swift in Sources */,
 				82EAFFB01B6D0F1900F76156 /* FileTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,13 +480,18 @@
 				82EAFF9A1B6D00D400F76156 /* ExtensionDelegate.swift in Sources */,
 				82EAFF981B6D00D400F76156 /* InterfaceController.swift in Sources */,
 				82EAFF9C1B6D00D400F76156 /* GlanceController.swift in Sources */,
-				82A6C3871B761B6200C0AECB /* Constants.swift in Sources */,
+				82E2CC2D1B932492005A19EA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		82E2CC251B931FAF005A19EA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82E2CC181B931FAF005A19EA /* OMXPlayer Remote Widget */;
+			targetProxy = 82E2CC241B931FAF005A19EA /* PBXContainerItemProxy */;
+		};
 		82EAFF861B6D00D300F76156 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 82EAFF821B6D00D300F76156 /* OMXPlayer Remote WatchKit App */;
@@ -366,6 +505,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		82E2CC201B931FAF005A19EA /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				82E2CC211B931FAF005A19EA /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		82EAFF781B6D00D300F76156 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -385,6 +532,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		82E2CC271B931FB0005A19EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "OMXPlayer Remote Widget/OMXPlayer Remote Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "OMXPlayer Remote Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote.OMXPlayer-Remote-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		82E2CC281B931FB0005A19EA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "OMXPlayer Remote Widget/OMXPlayer Remote Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "OMXPlayer Remote Widget/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote.OMXPlayer-Remote-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		82EAFFA01B6D00D400F76156 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -542,8 +719,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "OMXPlayer Remote/OMXPlayer Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "OMXPlayer Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote";
@@ -556,8 +735,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "OMXPlayer Remote/OMXPlayer Remote.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "OMXPlayer Remote/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.balogh.OMXPlayer-Remote";
@@ -569,6 +750,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		82E2CC291B931FB0005A19EA /* Build configuration list for PBXNativeTarget "OMXPlayer Remote Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82E2CC271B931FB0005A19EA /* Debug */,
+				82E2CC281B931FB0005A19EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		82EAFF6C1B6D00D300F76156 /* Build configuration list for PBXProject "OMXPlayer Remote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
