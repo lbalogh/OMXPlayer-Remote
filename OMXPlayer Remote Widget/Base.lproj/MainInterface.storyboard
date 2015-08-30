@@ -59,7 +59,7 @@
                                     <constraint firstAttribute="height" constant="42" id="Es2-Ah-TmH"/>
                                     <constraint firstAttribute="width" constant="42" id="wH6-vV-Whh"/>
                                 </constraints>
-                                <state key="normal" title="&lt;&lt;" image="seek_fast_backward"/>
+                                <state key="normal" title="&lt;&lt;" image="seek_fast_backward.png"/>
                                 <connections>
                                     <action selector="seekFastBackwardButtonPressed:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="KUb-bm-aFx"/>
                                 </connections>
@@ -108,7 +108,7 @@
     <resources>
         <image name="play_pause.png" width="180" height="180"/>
         <image name="seek_backward.png" width="180" height="180"/>
-        <image name="seek_fast_backward" width="180" height="180"/>
+        <image name="seek_fast_backward.png" width="180" height="180"/>
         <image name="seek_fast_forward.png" width="180" height="180"/>
         <image name="seek_forward.png" width="180" height="180"/>
     </resources>
