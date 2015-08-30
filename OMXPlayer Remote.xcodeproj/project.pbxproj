@@ -19,6 +19,7 @@
 		8265EDB61B934FB700B94AC7 /* seek_fast_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 8265EDB21B934FB700B94AC7 /* seek_fast_forward.png */; settings = {ASSET_TAGS = (); }; };
 		8265EDB71B934FB700B94AC7 /* seek_forward.png in Resources */ = {isa = PBXBuildFile; fileRef = 8265EDB31B934FB700B94AC7 /* seek_forward.png */; settings = {ASSET_TAGS = (); }; };
 		8265EDB81B934FB700B94AC7 /* stop.png in Resources */ = {isa = PBXBuildFile; fileRef = 8265EDB41B934FB700B94AC7 /* stop.png */; settings = {ASSET_TAGS = (); }; };
+		8292D1AE1B9373530093162C /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8292D1AD1B9373530093162C /* Icon-40@2x.png */; settings = {ASSET_TAGS = (); }; };
 		82A1EBD71B8A3C7D00B044C9 /* folder.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBD51B8A3C7D00B044C9 /* folder.png */; };
 		82A1EBD81B8A3C7D00B044C9 /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = 82A1EBD61B8A3C7D00B044C9 /* movie.png */; };
 		82D3C4CF1B93567F004530D9 /* seek_fast_backward in Resources */ = {isa = PBXBuildFile; fileRef = 82D3C4CE1B93567F004530D9 /* seek_fast_backward */; settings = {ASSET_TAGS = (); }; };
@@ -116,6 +117,7 @@
 		8265EDB21B934FB700B94AC7 /* seek_fast_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seek_fast_forward.png; sourceTree = "<group>"; };
 		8265EDB31B934FB700B94AC7 /* seek_forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seek_forward.png; sourceTree = "<group>"; };
 		8265EDB41B934FB700B94AC7 /* stop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop.png; sourceTree = "<group>"; };
+		8292D1AD1B9373530093162C /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		82A1EBD51B8A3C7D00B044C9 /* folder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = folder.png; sourceTree = "<group>"; };
 		82A1EBD61B8A3C7D00B044C9 /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
 		82D3C4CE1B93567F004530D9 /* seek_fast_backward */ = {isa = PBXFileReference; lastKnownFileType = file; path = seek_fast_backward; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				82EAFF881B6D00D300F76156 /* Interface.storyboard */,
 				82EAFF8B1B6D00D300F76156 /* Assets.xcassets */,
 				82EAFF8D1B6D00D300F76156 /* Info.plist */,
+				8292D1AD1B9373530093162C /* Icon-40@2x.png */,
 			);
 			path = "OMXPlayer Remote WatchKit App";
 			sourceTree = "<group>";
@@ -451,6 +454,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8292D1AE1B9373530093162C /* Icon-40@2x.png in Resources */,
 				82EAFF8C1B6D00D300F76156 /* Assets.xcassets in Resources */,
 				82EAFF8A1B6D00D300F76156 /* Interface.storyboard in Resources */,
 			);
