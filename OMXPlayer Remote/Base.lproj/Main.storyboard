@@ -261,11 +261,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="play_pause.png" width="256" height="256"/>
-        <image name="seek_backward.png" width="256" height="256"/>
+        <image name="play_pause.png" width="180" height="180"/>
+        <image name="seek_backward.png" width="180" height="180"/>
         <image name="seek_fast_backward.png" width="256" height="256"/>
-        <image name="seek_fast_forward.png" width="256" height="256"/>
-        <image name="seek_forward.png" width="256" height="256"/>
-        <image name="stop.png" width="256" height="256"/>
+        <image name="seek_fast_forward.png" width="180" height="180"/>
+        <image name="seek_forward.png" width="180" height="180"/>
+        <image name="stop.png" width="180" height="180"/>
     </resources>
 </document>
