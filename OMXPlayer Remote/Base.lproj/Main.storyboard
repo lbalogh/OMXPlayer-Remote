@@ -87,7 +87,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qO-6u-Rkd">
                                         <rect key="frame" x="39" y="103" width="42" height="42"/>
                                         <animations/>
-                                        <state key="normal" title="&lt;&lt;" image="seek_fast_backward.png"/>
+                                        <state key="normal" title="&lt;&lt;" image="seek_fast_backward"/>
                                         <connections>
                                             <action selector="seekFastBackwardButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZm-RQ-Baa"/>
                                         </connections>
@@ -263,7 +263,7 @@
     <resources>
         <image name="play_pause.png" width="180" height="180"/>
         <image name="seek_backward.png" width="180" height="180"/>
-        <image name="seek_fast_backward.png" width="256" height="256"/>
+        <image name="seek_fast_backward" width="180" height="180"/>
         <image name="seek_fast_forward.png" width="180" height="180"/>
         <image name="seek_forward.png" width="180" height="180"/>
         <image name="stop.png" width="180" height="180"/>
