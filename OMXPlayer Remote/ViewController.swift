@@ -54,10 +54,7 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
         print("Application did became active")
 
         // Check if a movie is playing, and refresh title and media controls
-        if !self.ipAddressTextField.text!.isEmpty && !self.portTextField.text!.isEmpty
-        {
-            self.sendCommandToPlayer([kCommandKey: kIsPlayingCommand])
-        }
+        self.sendCommandToPlayer([kCommandKey: kIsPlayingCommand])
     }
     
     func applicationWillTerminate()
