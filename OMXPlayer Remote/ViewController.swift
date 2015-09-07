@@ -39,8 +39,8 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
         
         networkHandler.delegate = self
 
-        self.ipAddressTextField.text = NSUserDefaults(suiteName: "group.com.balogh.OMXPlayer-Remote")!.stringForKey(kHostIpAddressKey)
-        self.portTextField.text = NSUserDefaults(suiteName: "group.com.balogh.OMXPlayer-Remote")!.stringForKey(kHostPortKey)
+        self.ipAddressTextField.text = NSUserDefaults(suiteName: kAppGroupName)!.stringForKey(kHostIpAddressKey)
+        self.portTextField.text = NSUserDefaults(suiteName: kAppGroupName)!.stringForKey(kHostPortKey)
 
         // Register to application state change notifications
         NSNotificationCenter.defaultCenter().addObserver(self, selector:Selector("refreshPlayingStatus"), name:UIApplicationDidBecomeActiveNotification, object:nil)
@@ -108,12 +108,12 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
 
     @IBAction func ipAddressTextFieldEdited(sender: AnyObject)
     {
-        NSUserDefaults(suiteName: "group.com.balogh.OMXPlayer-Remote")!.setValue(self.ipAddressTextField.text, forKey: kHostIpAddressKey)
+        NSUserDefaults(suiteName: kAppGroupName)!.setValue(self.ipAddressTextField.text, forKey: kHostIpAddressKey)
     }
 
     @IBAction func portTextFieldEdited(sender: AnyObject)
     {
-        NSUserDefaults(suiteName: "group.com.balogh.OMXPlayer-Remote")!.setValue(self.portTextField.text, forKey: kHostPortKey)
+        NSUserDefaults(suiteName: kAppGroupName)!.setValue(self.portTextField.text, forKey: kHostPortKey)
     }
     
     @IBAction func browseButtonPressed(sender: AnyObject)

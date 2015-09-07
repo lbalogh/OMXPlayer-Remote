@@ -36,3 +36,5 @@ let kHostIpAddressKey           = "host_ip_address";
 let kHostPortKey                = "host_port";
 
 let kReloadFileListNotification = "reloadFileList"
+
+let kAppGroupName               = "group.com.balogh.OMXPlayer-Remote"
