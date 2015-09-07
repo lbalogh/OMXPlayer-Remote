@@ -37,19 +37,20 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
             print("WCSession initialized")
         }
         
+        // Set the networkHandler delegate to self to receive responses from the server
         networkHandler.delegate = self
 
         self.ipAddressTextField.text = NSUserDefaults(suiteName: kAppGroupName)!.stringForKey(kHostIpAddressKey)
         self.portTextField.text = NSUserDefaults(suiteName: kAppGroupName)!.stringForKey(kHostPortKey)
 
         // Register to application state change notifications
-        NSNotificationCenter.defaultCenter().addObserver(self, selector:Selector("refreshPlayingStatus"), name:UIApplicationDidBecomeActiveNotification, object:nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:Selector("applicationDidBecomeActive"), name:UIApplicationDidBecomeActiveNotification, object:nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector:Selector("applicationWillTerminate"), name:UIApplicationWillTerminateNotification, object:nil)
         
-        self.refreshPlayingStatus()
+        self.applicationDidBecomeActive()
     }
     
-    func refreshPlayingStatus()
+    func applicationDidBecomeActive()
     {
         print("Application did became active")
 
