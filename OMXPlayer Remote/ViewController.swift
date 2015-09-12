@@ -158,10 +158,7 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
     @IBAction func refreshButtonPressed(sender: AnyObject)
     {
         // Check if a movie is playing
-        if !self.ipAddressTextField.text!.isEmpty && !self.portTextField.text!.isEmpty
-        {
-            self.sendCommandToPlayer([kCommandKey: kIsPlayingCommand])
-        }
+        self.sendCommandToPlayer([kCommandKey: kIsPlayingCommand])
     }
     
     @IBAction func subtitleButtonPressed(sender: AnyObject)
