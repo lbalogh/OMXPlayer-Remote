@@ -60,7 +60,7 @@ class ServerHandler(BaseHTTPRequestHandler):
 				player.quit()
 
 			filename = jsonData['path']
-			player = OMXPlayer(jsonData['path'])
+			player = OMXPlayer(jsonData['path'], args=['-b'])
 			player.play()
 		elif command == 'is_playing':
 			#playing = False if not 'player' in globals() else player.is_playing()
