@@ -40,8 +40,8 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
         // Set the networkHandler delegate to self to receive responses from the server
         networkHandler.delegate = self
 
-        self.ipAddressTextField.text = NSUserDefaults(suiteName: kAppGroupName)!.stringForKey(kHostIpAddressKey)
-        self.portTextField.text = NSUserDefaults(suiteName: kAppGroupName)!.stringForKey(kHostPortKey)
+        self.ipAddressTextField.text = NSUserDefaults(suiteName: kAppGroupIdentifier)!.stringForKey(kHostIpAddressKey)
+        self.portTextField.text = NSUserDefaults(suiteName: kAppGroupIdentifier)!.stringForKey(kHostPortKey)
 
         // Register to application state change notifications
         NSNotificationCenter.defaultCenter().addObserver(self, selector:Selector("applicationDidBecomeActive"), name:UIApplicationDidBecomeActiveNotification, object:nil)
@@ -109,12 +109,12 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
 
     @IBAction func ipAddressTextFieldEdited(sender: AnyObject)
     {
-        NSUserDefaults(suiteName: kAppGroupName)!.setValue(self.ipAddressTextField.text, forKey: kHostIpAddressKey)
+        NSUserDefaults(suiteName: kAppGroupIdentifier)!.setValue(self.ipAddressTextField.text, forKey: kHostIpAddressKey)
     }
 
     @IBAction func portTextFieldEdited(sender: AnyObject)
     {
-        NSUserDefaults(suiteName: kAppGroupName)!.setValue(self.portTextField.text, forKey: kHostPortKey)
+        NSUserDefaults(suiteName: kAppGroupIdentifier)!.setValue(self.portTextField.text, forKey: kHostPortKey)
     }
     
     @IBAction func browseButtonPressed(sender: AnyObject)
@@ -166,19 +166,19 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
         actionSheetController.addAction(UIAlertAction(title: "Next subtitle stream", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
-            self.sendCommandToPlayer([kCommandKey: kNextSubtitleStream])
+            self.sendCommandToPlayer([kCommandKey: kNextSubtitleStreamCommand])
         }))
         
         actionSheetController.addAction(UIAlertAction(title: "Previous subtitle stream", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
-            self.sendCommandToPlayer([kCommandKey: kPreviousSubtitleStream])
+            self.sendCommandToPlayer([kCommandKey: kPreviousSubtitleStreamCommand])
         }))
         
         actionSheetController.addAction(UIAlertAction(title: "Delay subtitle (+ 250ms)", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
-            self.sendCommandToPlayer([kCommandKey: kIncreaseSubtitleDelay])
+            self.sendCommandToPlayer([kCommandKey: kIncreaseSubtitleDelayCommand])
         }))
         
         actionSheetController.addAction(UIAlertAction(title: "Delay subtitle (- 250ms)", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
-            self.sendCommandToPlayer([kCommandKey: kDecreaseSubtitleDelay])
+            self.sendCommandToPlayer([kCommandKey: kDecreaseSubtitleDelayCommand])
         }))
         
         actionSheetController.addAction( UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
@@ -209,12 +209,12 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
 
     @IBAction func swipedUpWithOneFinger(sender: AnyObject)
     {
-        self.sendCommandToPlayer([kCommandKey: kIncreaseSubtitleDelay])
+        self.sendCommandToPlayer([kCommandKey: kIncreaseSubtitleDelayCommand])
     }
     
     @IBAction func swipedDownWithOneFinger(sender: AnyObject)
     {
-        self.sendCommandToPlayer([kCommandKey: kDecreaseSubtitleDelay])
+        self.sendCommandToPlayer([kCommandKey: kDecreaseSubtitleDelayCommand])
     }
 
     // MARK:Networking
