@@ -26,6 +26,8 @@ let kPreviousSubtitleStreamCommand  = "previous_subtitle_stream";
 let kNextSubtitleStreamCommand      = "next_subtitle_stream";
 let kIncreaseSubtitleDelayCommand   = "increase_subtitle_delay";
 let kDecreaseSubtitleDelayCommand   = "decrease_subtitle_delay";
+let kPreviousAudioStreamCommand     = "previous_audio_stream";
+let kNextAudioStreamCommand         = "next_audio_stream";
 
 let kCommandKey                     = "command";
 let kFilesKey                       = "files";

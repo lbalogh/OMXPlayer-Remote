@@ -165,7 +165,15 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
     {
         let actionSheetController = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
         
-        actionSheetController.addAction(UIAlertAction(title: "Next subtitle stream", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+        actionSheetController.addAction(UIAlertAction(title: "Next audio stream", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+            self.sendCommandToPlayer([kCommandKey: kNextAudioStreamCommand])
+        }))
+        
+        actionSheetController.addAction(UIAlertAction(title: "Previous audio stream", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
+            self.sendCommandToPlayer([kCommandKey: kPreviousAudioStreamCommand])
+        }))
+        
+       actionSheetController.addAction(UIAlertAction(title: "Next subtitle stream", style: UIAlertActionStyle.Default, handler: { (actionSheetController) -> Void in
             self.sendCommandToPlayer([kCommandKey: kNextSubtitleStreamCommand])
         }))
         

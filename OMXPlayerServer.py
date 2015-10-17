@@ -34,6 +34,10 @@ class ServerHandler(BaseHTTPRequestHandler):
 			player.action(21)
 		elif command == 'seek_fast_forward' and 'player' in globals():
 			player.action(22)
+		elif command == 'previous_audio_stream' and 'player' in globals():
+			player.action(6)
+		elif command == 'next_audio_stream' and 'player' in globals():
+			player.action(7)
 		elif command == 'previous_subtitle_stream' and 'player' in globals():
 			player.action(10)
 		elif command == 'next_subtitle_stream' and 'player' in globals():

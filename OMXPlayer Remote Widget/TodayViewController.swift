@@ -56,8 +56,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     func sendCommandToPlayer(command: AnyObject)
     {
-        let ipAddress = NSUserDefaults(suiteName: kAppGroupName)!.stringForKey(kHostIpAddressKey)
-        let port = NSUserDefaults(suiteName: kAppGroupName)!.stringForKey(kHostPortKey)
+        let ipAddress = NSUserDefaults(suiteName: kAppGroupIdentifier)!.stringForKey(kHostIpAddressKey)
+        let port = NSUserDefaults(suiteName: kAppGroupIdentifier)!.stringForKey(kHostPortKey)
         
         if ipAddress!.isEmpty || port!.isEmpty
         {
