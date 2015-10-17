@@ -90,7 +90,7 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
     
     func playFile(path: String)
     {
-        self.title = "\((path as NSString).lastPathComponent)"
+        self.title = "Playing : \((path as NSString).lastPathComponent)"
         self.enableMediaControls(true)
         self.sendCommandToPlayer([kCommandKey: kPlayCommand, kPathKey: path])
     }
