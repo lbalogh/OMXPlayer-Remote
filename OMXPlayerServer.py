@@ -15,7 +15,6 @@ SUPPORTED_FORMATS	= ('.mkv', '.avi', '.mp4', '.mov', '.srt')
 class ServerHandler(BaseHTTPRequestHandler):
 	def do_POST(self):
 		global player
-		global filename
 		global home_path
 
 		jsonData = json.loads(self.rfile.read(int(self.headers.getheader('content-length'))))
@@ -47,9 +46,9 @@ class ServerHandler(BaseHTTPRequestHandler):
 		elif command == 'increase_subtitle_delay' and 'player' in globals():
 			player.action(14)
 		elif command == 'stop' and 'player' in globals():
-			filename = ''
 			player.stop()
 			player.quit()
+			del player
 		elif command == 'delete_file':
 			os.remove(jsonData['path'])
 		elif command == 'delete_folder':
@@ -63,12 +62,14 @@ class ServerHandler(BaseHTTPRequestHandler):
 				player.stop()
 				player.quit()
 
-			filename = jsonData['path']
 			player = OMXPlayer(jsonData['path'], args=['-b'])
 			player.play()
 		elif command == 'is_playing':
-			#playing = False if not 'player' in globals() else player.is_playing()
-			SendResponse(self, {'command': command, 'path': filename})
+			if 'player' in globals():
+				SendResponse(self, {'command': command, 'path': player.get_filename()})
+			else:
+				SendResponse(self, {'command': command, 'path': ''})
+
 		elif command == 'list_dir':
 			path = jsonData['path'] if 'path' in jsonData else home_path
 
@@ -99,7 +100,6 @@ if __name__ == '__main__':
 	server_ip = ''
 	server_port = ''
 	home_path = ''
-	filename = ''
 
 	try:
 		opts, args = getopt.getopt(sys.argv[1:], 'ha:p:d:')
