@@ -265,9 +265,9 @@ class ViewController: UIViewController, WCSessionDelegate, NetworkHandlerDelegat
                 self.title = nil
                 self.enableMediaControls(false)
             case kIsPlayingCommand:
-                let path = dict.objectForKey(kPathKey) as! NSString
-                self.title = path.length > 0 ? "Playing : \(path.lastPathComponent)" : nil
-                self.enableMediaControls(path.length > 0)
+                let path = dict.objectForKey(kPathKey) as? NSString
+                self.title = path?.length > 0 ? "Playing : \(path!.lastPathComponent)" : nil
+                self.enableMediaControls(path?.length > 0)
             default:
                 print("Unknown command received from player : \(dict.objectForKey(kCommandKey))")
             }
